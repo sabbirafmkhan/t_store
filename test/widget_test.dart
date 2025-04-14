@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:t_store/app.dart';
 import 'package:t_store/main.dart';
 
 void main() {
