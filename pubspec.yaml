@@ -19,6 +19,7 @@ dependencies:
   logger: ^2.5.0
   url_launcher: ^6.3.1
   flutter_native_splash: ^2.4.6
+  smooth_page_indicator: ^1.2.1
 
 
   # Icon
@@ -45,8 +46,8 @@ flutter:
 #--------- Local assets -------#
   assets:
     - assets/logos/
-    - assets/images/
-    - assets/icons/
+    - assets/icons/brands/
+    - assets/images/on_boarding_images/
 
 #--------- Local fonts -------#
   fonts:
