@@ -20,9 +20,11 @@ dependencies:
   url_launcher: ^6.3.1
   flutter_native_splash: ^2.4.6
   smooth_page_indicator: ^1.2.1
+  connectivity_plus: ^6.1.3
+  lottie: ^3.3.1 # OR RIVE
 
 
-  # Icon
+  # Icons
   cupertino_icons: ^1.0.8
   iconsax: ^0.0.8
 
@@ -32,6 +34,9 @@ dependencies:
 
 
   # Product Specific
+
+  # Firebase
+  firebase_storage: ^12.4.5
 
 #--------- ./packages end -------#
 dev_dependencies:
@@ -47,6 +52,13 @@ flutter:
   assets:
     - assets/logos/
     - assets/icons/brands/
+    - assets/images/content/
+    - assets/images/banners/
+    - assets/images/reviews/
+    - assets/images/products/
+    - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
     - assets/images/on_boarding_images/
 
 #--------- Local fonts -------#

@@ -4,6 +4,8 @@ import 'package:intl/intl.dart';
 
 class THelperFunctions {
   static Color? getColor(String value) {
+    /// Define your product specific colors here and it will match the attribute colors and show specific 🟠🟡🟢🔵🟣🟤
+
     if (value == 'Green') {
       return Colors.green;
     } else if (value == 'Green') {
@@ -39,9 +41,7 @@ class THelperFunctions {
 
   static void showSnackBar(String message) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
+      SnackBar(content: Text(message)),
     );
   }
 
@@ -55,7 +55,7 @@ class THelperFunctions {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: Text("Ok"),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -94,7 +94,7 @@ class THelperFunctions {
     return MediaQuery.of(Get.context!).size.width;
   }
 
-  static String getFormattedDate(DateTime date, {String format = 'dd mm yyy'}) {
+  static String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}) {
     return DateFormat(format).format(date);
   }
 
@@ -102,16 +102,11 @@ class THelperFunctions {
     return list.toSet().toList();
   }
 
-  static List<Widget> wrapWidgets(List<Widget> widget, int rowSize) {
+  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
     final wrappedList = <Widget>[];
-    for (var i = 0; i < widget.length; i += rowSize) {
-      final rowChildren = widget.sublist(
-          i, i + rowSize > widget.length ? widget.length : i + rowSize);
-      wrappedList.add(
-        Row(
-          children: rowChildren,
-        ),
-      );
+    for (var i = 0; i < widgets.length; i += rowSize) {
+      final rowChildren = widgets.sublist(i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
+      wrappedList.add(Row(children: rowChildren));
     }
     return wrappedList;
   }
