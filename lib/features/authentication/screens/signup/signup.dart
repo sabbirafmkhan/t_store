@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/form_divider.dart';
-import 'package:t_store/common/widgets/social_buttons.dart';
+import 'package:t_store/common/widgets/signup_login/form_divider.dart';
+import 'package:t_store/common/widgets/signup_login/social_buttons.dart';
 import 'package:t_store/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
