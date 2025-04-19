@@ -70,7 +70,7 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() => SignupScreen()),
+                onPressed: () => Get.off(() => SignupScreen()),
                 child: Text(TTexts.createAccount),
               ),
             ),
