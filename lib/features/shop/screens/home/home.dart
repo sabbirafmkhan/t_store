@@ -4,7 +4,9 @@ import 'package:t_store/common/widgets/custom_shapes/containers/search_container
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,36 +20,49 @@ class HomeScreen extends StatelessWidget {
           children: [
             /// -- Header---:
             TPrimaryHeaderContainer(
-                child: Column(
-              children: [
-                /// --- Appbar ---
-                THomeAppbar(),
-                SizedBox(height: TSizes.spaceBtwSections),
+              child: Column(
+                children: [
+                  /// --- Appbar ---
+                  THomeAppbar(),
+                  SizedBox(height: TSizes.spaceBtwSections),
 
-                /// -- searchbar:
-                TSearchContainer(text: 'Search in Store'),
-                SizedBox(height: TSizes.spaceBtwSections),
+                  /// -- searchbar:
+                  TSearchContainer(text: 'Search in Store'),
+                  SizedBox(height: TSizes.spaceBtwSections),
 
-                /// --- Categories section:
-                Padding(
-                  padding: EdgeInsets.only(left: TSizes.defaultSpace),
-                  child: Column(
-                    children: [
-                      /// --- Heading:
-                      TSectionHeading(
-                        title: 'Popular Categories',
-                        showActionButton: false,
-                        textColor: TColors.white,
-                      ),
-                      SizedBox(height: TSizes.spaceBtwItems),
+                  /// --- Categories section:
+                  Padding(
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        /// --- Heading:
+                        TSectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: TColors.white,
+                        ),
+                        SizedBox(height: TSizes.spaceBtwItems),
 
-                      /// Categories:
-                      THomeCategories(),
-                    ],
+                        /// Categories:
+                        THomeCategories(),
+                      ],
+                    ),
                   ),
-                )
-              ],
-            ))
+                ],
+              ),
+            ),
+
+            /// -- Body :
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(
+                banners: [
+                  TImages.promoBanner1,
+                  TImages.promoBanner2,
+                  TImages.promoBanner3,
+                ],
+              ),
+            )
           ],
         ),
       ),
