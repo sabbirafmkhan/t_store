@@ -88,7 +88,9 @@ class TProductCardVertical extends StatelessWidget {
                   TProductTitleText(
                       title: 'Green NIKE Air Shoes', smallSize: true),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike',),
+                  TBrandTitleWithVerifiedIcon(
+                    title: 'Nike',
+                  ),
                 ],
               ),
             ),
@@ -131,5 +133,3 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
-
-
