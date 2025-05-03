@@ -36,6 +36,7 @@ dependencies:
   # Product Specific
   readmore: ^3.0.0
   carousel_slider: ^5.0.0
+  flutter_rating_bar: ^4.0.1
 
   # Firebase
   firebase_storage: ^12.4.5
