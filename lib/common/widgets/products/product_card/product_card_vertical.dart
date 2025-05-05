@@ -23,14 +23,13 @@ class TProductCardVertical extends StatelessWidget {
 
     /// Container with side paddings,color,edges, radius and shadow:
     return GestureDetector(
-      onTap: () => Get.to(()=> ProductDetailsScreen()),
+      onTap: () => Get.to(() => ProductDetailsScreen()),
       child: Container(
         width: 180,
         padding: EdgeInsets.all(1),
         decoration: BoxDecoration(
-          boxShadow: [TShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-          color: dark ? TColors.darkerGrey : TColors.white,
+          color: dark ? TColors.darkerGrey : TColors.softGrey,
         ),
         child: Column(
           children: [
