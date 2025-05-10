@@ -32,9 +32,12 @@ class AuthenticationRepository extends GetxController {
   screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
+      // if the user is logged in:
       if (user.emailVerified) {
+        // if the user's email is not verified, navigate to the main navigation menu:
         Get.offAll(() => NavigationManu());
       } else {
+        // if the user's email is not verified, navigate to the verifyEmailScreen
         Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
       }
     } else {
@@ -44,14 +47,32 @@ class AuthenticationRepository extends GetxController {
       deviceStorage.read('IsFirstTime') != true
           ? Get.offAll(() =>
               LoginScreen()) // redirect to login screen if not the first time.
-          : Get.offAll(() =>
+          : Get.offAll(
               OnBoardingScreen()); // redirect to OnBoarding screen if it's the first time.
     }
   }
 
   /* --------------------------- Email & Password sign-in ------------------*/
 
-  /// [EmailAuthentication] - SignIn
+  /// [EmailAuthentication] - LOGIN:
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
   /// [EmailAuthentication] - Register
   Future<UserCredential> registerWithEmailAndPassword(
       String email, String password) async {

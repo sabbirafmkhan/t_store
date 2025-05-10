@@ -38,7 +38,7 @@ class SignupController extends GetxController {
       }
 
       // form validation
-      if (signupFormKey.currentState!.validate()) {
+      if (!signupFormKey.currentState!.validate()) {
         // Remove Loader:
         TFullScreenLoader.stopLoading();
         return;
@@ -59,7 +59,7 @@ class SignupController extends GetxController {
           .registerWithEmailAndPassword(
               email.text.trim(), password.text.trim());
 
-      // save Authenticated user data in the Firebase Firestore:
+      // save Authenticated user data in the Firebase FireStore:
       final newUser = UserModel(
         id: uerCredential.user!.uid,
         firstName: firstName.text.trim(),
