@@ -22,6 +22,7 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   connectivity_plus: ^6.1.3
   lottie: ^3.3.1 # OR RIVE
+  shimmer: ^3.0.0
 
 
   # Icons
