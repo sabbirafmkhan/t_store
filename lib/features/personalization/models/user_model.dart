@@ -56,27 +56,31 @@ class UserModel {
   /// convert model to JSON structure for storing data in firebase:
   Map<String, dynamic> toJson() {
     return {
-      firstName: 'firstName',
-      lastName: 'lastName',
-      username: 'username',
-      email: 'email',
-      phoneNumber: 'phoneNumber',
-      profilePicture: 'profilePicture',
+      'FirstName': firstName,
+      'LastName': lastName,
+      'Username': username,
+      'Email': email,
+      'PhoneNumber': phoneNumber,
+      'ProfilePicture': profilePicture,
     };
   }
 
   /// Factory method to create a userModel from firebase document snapshot:
   factory UserModel.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> document) {
-    final data = document.data() ?? {};
-    return UserModel(
-      id: document.id,
-      firstName: data['firstName'] ?? '',
-      lastName: data['lastName'] ?? '',
-      username: data['username'] ?? '',
-      email: data['email'] ?? '',
-      phoneNumber: data['phoneNumber'] ?? '',
-      profilePicture: data['profilePicture'] ?? '',
-    );
+    if (document.data() != null) {
+      final data = document.data()!;
+      return UserModel(
+        id: document.id,
+        firstName: data['FirstName'] ?? '',
+        lastName: data['LastName'] ?? '',
+        username: data['Username'] ?? '',
+        email: data['Email'] ?? '',
+        phoneNumber: data['PhoneNumber'] ?? '',
+        profilePicture: data['ProfilePicture'] ?? '',
+      );
+    } else {
+      return UserModel.empty();
+    }
   }
 }
