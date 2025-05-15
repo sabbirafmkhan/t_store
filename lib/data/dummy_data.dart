@@ -1,25 +1,50 @@
+import 'package:t_store/features/shop/models/banner_model.dart';
 import 'package:t_store/features/personalization/models/user_model.dart';
 import 'package:t_store/features/shop/models/category_model.dart';
+import 'package:t_store/features/shop/models/cart_model.dart';
+import 'package:t_store/features/shop/models/order_model.dart';
 import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
+import 'package:t_store/utils/constants/routes.dart';
 
 class TDummyData {
   /// -- Banners
   static final List<BannerModel> banners = [
     BannerModel(
-        imageUrl: TImages.banner1, targetScreen: TRoutes.order, active: false),
+        id: '1',
+        imageUrl: TImages.banner1,
+        targetScreen: TRoutes.order,
+        active: false),
     BannerModel(
-        imageUrl: TImages.banner2, targetScreen: TRoutes.order, active: true),
+        id: '2',
+        imageUrl: TImages.banner2,
+        targetScreen: TRoutes.order,
+        active: true),
     BannerModel(
-        imageUrl: TImages.banner3, targetScreen: TRoutes.order, active: true),
+        id: '3',
+        imageUrl: TImages.banner3,
+        targetScreen: TRoutes.order,
+        active: true),
     BannerModel(
-        imageUrl: TImages.banner4, targetScreen: TRoutes.order, active: true),
+        id: '4',
+        imageUrl: TImages.banner4,
+        targetScreen: TRoutes.order,
+        active: true),
     BannerModel(
-        imageUrl: TImages.banner5, targetScreen: TRoutes.order, active: true),
+        id: '5',
+        imageUrl: TImages.banner5,
+        targetScreen: TRoutes.order,
+        active: true),
     BannerModel(
-        imageUrl: TImages.banner6, targetScreen: TRoutes.order, active: true),
+        id: '6',
+        imageUrl: TImages.banner6,
+        targetScreen: TRoutes.order,
+        active: true),
     BannerModel(
-        imageUrl: TImages.banner8, targetScreen: TRoutes.order, active: false),
+        id: '7',
+        imageUrl: TImages.banner8,
+        targetScreen: TRoutes.order,
+        active: false),
   ];
 
   /// -- User:
@@ -34,8 +59,8 @@ class TDummyData {
           id: '1',
           name: 'Coding with T',
           phoneNumber: '01234567890',
-          street: 'timmy coves',
-          city: 'South liana',
+          street: 'Timmy Coves',
+          city: 'South Liana',
           state: 'Maine',
           postalCode: '87665',
           country: 'USA',
@@ -44,8 +69,8 @@ class TDummyData {
           id: '6',
           name: 'Coding with T',
           phoneNumber: '01234567890',
-          street: 'timmy coves',
-          city: 'South liana',
+          street: 'Timmy Coves',
+          city: 'South Liana',
           state: 'Maine',
           postalCode: '87665',
           country: 'USA',
@@ -53,10 +78,10 @@ class TDummyData {
       ]);
 
   /// -- cart
-  static final cartModel cart = CartModel(
+  static final CartModel cart = CartModel(
     cartId: '001',
     items: [
-      cartItemsModel(
+      CartItemsModel(
         productId: '001',
         variationId: '1',
         quantity: 2,
@@ -66,7 +91,7 @@ class TDummyData {
         price: products[0].productVariations![0].price,
         selectedVariation: products[0].productVariations![0].attributeValues,
       ),
-      cartItemsModel(
+      CartItemsModel(
         productId: '001',
         variationId: '2',
         quantity: 2,
@@ -87,7 +112,7 @@ class TDummyData {
       items: cart.items,
       totalAmount: 265,
       orderDate: DateTime(2025, 5, 15),
-      delivaryDate: DateTime(2025, 5, 20),
+      deliveryDate: DateTime(2025, 5, 20),
     ),
     OrderModel(
       id: 'CWT0025',
@@ -95,7 +120,7 @@ class TDummyData {
       items: cart.items,
       totalAmount: 265,
       orderDate: DateTime(2025, 5, 15),
-      delivaryDate: DateTime(2025, 5, 20),
+      deliveryDate: DateTime(2025, 5, 20),
     ),
   ];
 
@@ -144,8 +169,8 @@ class TDummyData {
         isFeatured: true),
     CategoryModel(
         id: '14',
-        name: 'Jewelery',
-        image: TImages.jeweleryIcon,
+        name: 'Jewelry',
+        image: TImages.jewelryIcon,
         isFeatured: true),
 
     /// subcategories:
