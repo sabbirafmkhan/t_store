@@ -14,8 +14,8 @@ class ProductModel {
   String thumbnail;
   bool? isFeatured;
   BrandModel? brand;
-  String description;
-  String categoryId;
+  String? description;
+  String? categoryId;
   List<String>? images;
   String productType;
   List<ProductAttributeModel>? productAttributes;
@@ -34,8 +34,8 @@ class ProductModel {
     this.images,
     this.salePrice = 0.0,
     this.isFeatured,
-    this.description = '',
-    this.categoryId = '',
+    this.description,
+    this.categoryId,
     this.productAttributes,
     this.productVariations,
   });

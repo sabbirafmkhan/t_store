@@ -9,6 +9,7 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_de
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:t_store/features/shop/screens/product_reviews/product_reviews.dart';
+import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:readmore/readmore.dart';
 
@@ -25,7 +26,7 @@ class ProductDetailsScreen extends StatelessWidget {
         child: Column(
           children: [
             /// -- Product image slider:
-            TProductImageSlider(product: product,),
+            TProductImageSlider(product: product),
 
             /// -- product details:
             Padding(
@@ -40,11 +41,13 @@ class ProductDetailsScreen extends StatelessWidget {
                   TRatingAndShare(),
 
                   /// - price , title, stock, brand:
-                  TProductMetaData(),
+                  TProductMetaData(product: product),
 
                   ///  - Attributes:
-                  TProductAttributes(),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  if (product.productType == ProductType.variable.toString())
+                    TProductAttributes(product: product),
+                  if (product.productType == ProductType.variable.toString())
+                    SizedBox(height: TSizes.spaceBtwSections),
 
                   ///  - Checkout Button:
                   SizedBox(
@@ -61,7 +64,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       title: 'Description', showActionButton: false),
                   SizedBox(height: TSizes.spaceBtwItems),
                   ReadMoreText(
-                    "Elevate your game with Nike shoes! Experience superior comfort, innovative technology, and iconic style for running, training, and everyday wear. Shop now!",
+                    product.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: ' Show more',
