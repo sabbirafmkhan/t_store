@@ -14,8 +14,8 @@ class ProductModel {
   String thumbnail;
   bool? isFeatured;
   BrandModel? brand;
-  String description;
-  String categoryId;
+  String? description;
+  String? categoryId;
   List<String>? images;
   String productType;
   List<ProductAttributeModel>? productAttributes;
@@ -34,8 +34,8 @@ class ProductModel {
     this.images,
     this.salePrice = 0.0,
     this.isFeatured,
-    this.description = '',
-    this.categoryId = '',
+    this.description,
+    this.categoryId,
     this.productAttributes,
     this.productVariations,
   });
@@ -77,6 +77,7 @@ class ProductModel {
   /// Map Json oriented document snapshot from Firebase to Model
   factory ProductModel.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() == null) return ProductModel.empty();
     final data = document.data()!;
     return ProductModel(
       id: document.id,

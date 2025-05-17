@@ -1,5 +1,3 @@
-
-
 import 'package:t_store/features/personalization/models/user_model.dart';
 import 'package:t_store/features/shop/models/banner_model.dart';
 import 'package:t_store/features/shop/models/brand_model.dart';
@@ -8,6 +6,7 @@ import 'package:t_store/features/shop/models/product_attribute_model.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
 import 'package:t_store/features/shop/models/product_variation_mode.dart';
 import 'package:t_store/routes/routes.dart';
+import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
 class TDummyData {
