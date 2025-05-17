@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:t_store/features/shop/controllers/product/images_controller.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/features/shop/models/product_variation_mode.dart';
+import 'package:t_store/features/shop/models/product_variation_model.dart';
 
 class VariationController extends GetxController {
   static VariationController get instance => Get.find();
