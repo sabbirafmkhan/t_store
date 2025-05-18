@@ -27,7 +27,7 @@ class ImagesController extends GetxController {
     }
 
     // Get all images from  the product variations if not null:
-    if (product.productVariations != null ||
+    if (product.productVariations != null &&
         product.productVariations!.isNotEmpty) {
       images.addAll(
           product.productVariations!.map((variation) => variation.image));
