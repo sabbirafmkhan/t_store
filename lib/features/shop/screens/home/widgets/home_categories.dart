@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets/image_text_widgets/vertical_image_text.dart';
-import 'package:t_store/common/widgets/shimmer/category_Shimmer.dart';
+import 'package:t_store/common/widgets/shimmer/category_shimmer.dart';
 import 'package:t_store/features/shop/controllers/category_controller.dart';
 import 'package:t_store/features/shop/screens/sub_category/sub_categories.dart';
 

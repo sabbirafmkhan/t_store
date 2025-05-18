@@ -52,13 +52,10 @@ class BrandModel {
         id: document.id,
         name: data['Name'] ?? '',
         image: data['Image'] ?? '',
-        isFeatured:
-            data['IsFeatured'] ?? false, // Added these back based on fromJson
-        productsCount: int.parse((data['ProductsCount'] ?? 0)
-            .toString()), // Added these back based on fromJson
+        productsCount: data['ProductsCount'] ?? '',
+        isFeatured: data['IsFeatured'] ?? false,
       );
     } else {
-      // Return an empty BrandModel if the data is null
       return BrandModel.empty();
     }
   }
