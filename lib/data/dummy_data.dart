@@ -3,6 +3,7 @@ import 'package:t_store/features/personalization/models/user_model.dart';
 import 'package:t_store/features/shop/models/banner_model.dart';
 import 'package:t_store/features/shop/models/brand_model.dart';
 import 'package:t_store/features/shop/models/category_model.dart';
+import 'package:t_store/features/shop/models/order_model.dart';
 import 'package:t_store/features/shop/models/product_attribute_model.dart';
 import 'package:t_store/features/shop/models/product_category_model.dart';
 import 'package:t_store/features/shop/models/product_model.dart';

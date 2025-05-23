@@ -10,7 +10,7 @@ import 'package:t_store/data/repositories/authentication/authentication_reposito
 import 'package:t_store/features/personalization/screens/address/address.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/features/shop/screens/cart/cart.dart';
-import 'package:t_store/features/shop/screens/order/widgets/order.dart';
+import 'package:t_store/features/shop/screens/order/order.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
