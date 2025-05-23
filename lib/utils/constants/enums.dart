@@ -4,11 +4,24 @@
 -- */
 
 /// Switch of Custom Brand-Text-Size Widget
-enum ProductType { single, variable }
+enum ProductType {
+  single,
+  variable,
+}
 
-enum TextSizes { small, medium, large }
+enum TextSizes {
+  small,
+  medium,
+  large,
+}
 
-enum OrderStatus { processing, shipped, delivered }
+enum OrderStatus {
+  processing,
+  shipped,
+  delivered,
+  pending,
+  cancelled,
+}
 
 enum PaymentMethods {
   paypal,

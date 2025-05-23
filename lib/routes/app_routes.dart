@@ -10,7 +10,7 @@ import 'package:t_store/features/personalization/screens/settings/settings.dart'
 import 'package:t_store/features/shop/screens/cart/cart.dart';
 import 'package:t_store/features/shop/screens/checkout/checkout.dart';
 import 'package:t_store/features/shop/screens/home/home.dart';
-import 'package:t_store/features/shop/screens/order/widgets/order.dart';
+import 'package:t_store/features/shop/screens/order/order.dart';
 import 'package:t_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:t_store/features/shop/screens/store/store.dart';
 import 'package:t_store/features/shop/screens/wishlist/wishlist.dart';

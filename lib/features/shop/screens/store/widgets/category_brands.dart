@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/brands/brand_show_case.dart';
 import 'package:t_store/common/widgets/shimmer/boxes_shimmer.dart';
 import 'package:t_store/common/widgets/shimmer/list_tile_shimmer.dart';
-import 'package:t_store/features/shop/controllers/product/brand_controller.dart';
+import 'package:t_store/features/shop/controllers/brand_controller.dart';
 import 'package:t_store/features/shop/models/category_model.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
